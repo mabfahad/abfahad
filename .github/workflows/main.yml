@@ -14,7 +14,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-        eval "$(ssh-agent -s)"
+        eval $(ssh-agent -s)
         ssh-add ~/.ssh/id_ed25519
         cd /home/abfahad2/public_html
         git pull
